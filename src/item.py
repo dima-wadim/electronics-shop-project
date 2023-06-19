@@ -3,9 +3,11 @@ class Item:
     Класс для представления товара в магазине.
     """
     pay_rate = 1.0
-    all = []
+
 
     def __init__(self, name: str, price: float, quantity: int) -> None:
+
+
         """
         Создание экземпляра класса item.
 
@@ -17,9 +19,10 @@ class Item:
         self.price = price
         self.quantity = quantity
 
+    all = []
     def calculate_total_price(self) -> float:
         """
-        Рассчитывает общую стоимость конкретного товара в мpoагазине.
+        Рассчитывает общую стоимость конкретного товара в магазине.
 
         :return: Общая стоимость товара.
         """
