@@ -8,6 +8,7 @@ class Item:
     def __init__(self, name: str, price: float, quantity: int) -> None:
 
 
+
         """
         Создание экземпляра класса item.
 
@@ -19,7 +20,8 @@ class Item:
         self.price = price
         self.quantity = quantity
 
-    all = []
+        #Item.all.append(self)
+
     def calculate_total_price(self) -> float:
         """
         Рассчитывает общую стоимость конкретного товара в магазине.
@@ -28,10 +30,12 @@ class Item:
         """
         return float(self.price * self.quantity)
 
+    all = []
     def apply_discount(self) -> None:
         """
         Применяет установленную скидку для конкретного товара.
         """
         self.price = float(self.price * self.pay_rate)
+
 
         Item.all.append(Item(self.name, self.price, self.quantity))
